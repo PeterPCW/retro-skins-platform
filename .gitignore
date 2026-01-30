@@ -5,7 +5,7 @@ node_modules/
 dist/
 *.js
 *.d.ts
-!bin/retro-skins.js
+bin/retro-skins.js
 
 # OS files
 .DS_Store
