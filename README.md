@@ -2,6 +2,9 @@
 
 Generate retro terminal skins with CRT effects, scanlines, glow, and more. Supports **WezTerm**, **Alacritty**, **Kitty**, and **Windows Terminal** terminal emulators.
 
+[![NPM Package](https://img.shields.io/npm/v/retro-skins-platform.svg)](https://www.npmjs.com/package/retro-skins-platform)
+[![License](https://img.shields.io/npm/l/retro-skins-platform.svg)](LICENSE)
+
 ## Installation
 
 ```bash
