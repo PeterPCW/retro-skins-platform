@@ -1,0 +1,68 @@
+{
+  "name": "retro-skins-platform",
+  "version": "1.0.0",
+  "description": "Create retro terminal skins with CRT effects, scanlines, glow, and more",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./engine": {
+      "types": "./dist/engine/index.d.ts",
+      "import": "./dist/engine/index.js",
+      "require": "./dist/engine/index.js"
+    },
+    "./presets": {
+      "types": "./dist/engine/skins.d.ts",
+      "import": "./dist/engine/skins.js",
+      "require": "./dist/engine/skins.js"
+    }
+  },
+  "bin": {
+    "retro-skins": "./bin/retro-skins.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc && esbuild src/index.ts --bundle --outfile=dist/index.js --format=esm --platform=node && tsc --project tsconfig.cli.json",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "terminal",
+    "theme",
+    "retro",
+    "crt",
+    "wezterm",
+    "alacritty",
+    "kitty",
+    "skin",
+    "color-scheme"
+  ],
+  "author": "Peter <peter@clawd.bot>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterwsl/retro-skins-platform"
+  },
+  "bugs": {
+    "url": "https://github.com/peterwsl/retro-skins-platform/issues"
+  },
+  "homepage": "https://github.com/peterwsl/retro-skins-platform",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "inquirer": "^9.2.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^25.1.0",
+    "esbuild": "^0.27.2",
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.0"
+  }
+}
